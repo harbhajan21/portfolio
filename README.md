@@ -12,7 +12,7 @@ This portfolio showcases my journey, skills, and projects in the field of data s
 
 ## Contact Information
 
-Feel free to connect with me if you have any questions, suggestions, or opportunities for collaboration. You can reach me at [Email Address](harbhajan2105@gmail.com).
+Feel free to connect with me if you have any questions, suggestions, or opportunities for collaboration. You can reach me at [harbhajan2105@gmail.com].
 
 Thank you for visiting my portfolio repository, and I hope you find it informative and inspiring!
 
