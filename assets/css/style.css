@@ -1357,3 +1357,7 @@ a:hover {
 
 .skill-mf ul li, .skill-mf span {font-size: 1.25rem;}
 
+.col-md-4 {
+    border-radius: 1rem;
+}
+
