@@ -6,6 +6,12 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Harbhajan Singh</title>
+  <style>
+	#home {
+	    transition: background-image 0.5s ease-in-out; /* Smooth transition for background image */
+	    background-image: url(assets/img/Extras/Portfolio7.png); /* Preload the first image */
+	}
+  </style>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <meta name="image" property="og:image" content="assets/img/Linkedin_bg.png">
@@ -57,17 +63,38 @@
     </div>
   </nav>
 
-  <div id="home" class="intro route bg-image" style="background-image: url(assets/img/bg.png)">
-    <div class="overlay-itro"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h1 class="intro-title mb-4">Harbhajan Singh</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Data Scientist, Machine Learning Engineer, Data Analyst, AI Engineer</span><strong class="text-slider"></strong></p>
+  <div id="home" class="intro route bg-image">
+        <div class="overlay-itro"></div>
+        <div class="intro-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <h1 class="intro-title mb-4">Harbhajan Singh</h1>
+                    <p class="intro-subtitle">
+                        <span class="text-slider-items">
+                            Data Scientist, Machine Learning Engineer, Data Analyst, AI Engineer
+                        </span>
+                        <strong class="text-slider"></strong>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
   </div>
+
+  <script>
+    const images = ['Portfolio0.png', 'Portfolio1.png', 'Portfolio2.png', 'Portfolio3.png', 'Portfolio4.png', 'Portfolio5.png', 'Portfolio6.png', 'Portfolio7.png']; // Add your image filenames here
+        let currentIndex = 0;
+
+        function changeImage() {
+            const imageUrl = 'assets/img/Extras/' + images[currentIndex]; // Assuming images are located in "Slider" folder
+            const homeElement = document.getElementById('home');
+            
+            homeElement.style.transition = 'background-image 0.5s ease-in-out'; // Add transition for smoothness
+            homeElement.style.backgroundImage = `url(${imageUrl})`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeImage, 3000); // Change image every 3 seconds
+  </script>
 
   <main id="main">
 
