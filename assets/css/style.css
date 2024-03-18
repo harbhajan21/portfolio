@@ -1357,3 +1357,43 @@ a:hover {
 
 .skill-mf ul li, .skill-mf span {font-size: 1.25rem;}
 
+.service-carousel {
+  position: relative;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 25%;
+  /* transform: translateY(-50%); */
+  font-size: 80px;
+  width: 100%;
+}
+
+.owl-prev {
+  position: absolute;
+  left: -50px; /* Adjust as needed */
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 100px;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.owl-next {
+  position: absolute;
+  right: -50px; /* Adjust as needed */
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 100px;
+  color: #000;
+  transition: color 0.3s;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  color: #888;
+}
