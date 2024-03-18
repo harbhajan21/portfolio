@@ -7,11 +7,11 @@
 
   <title>Harbhajan Singh</title>
   <style>
-	#home {
-	    transition: background-image 0.5s ease-in-out; /* Smooth transition for background image */
-	    background-image: url(assets/img/Extras/Portfolio7.png); /* Preload the first image */
-	}
-  </style>
+        #home {
+            transition: background-image 0.5s ease-in-out; /* Smooth transition for background image */
+            background-image: url(assets/img/Extras/Portfolio7.png); /* Preload the first image */
+        }
+    </style>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <meta name="image" property="og:image" content="assets/img/Linkedin_bg.png">
@@ -63,38 +63,49 @@
     </div>
   </nav>
 
-  <div id="home" class="intro route bg-image">
-        <div class="overlay-itro"></div>
-        <div class="intro-content display-table">
-            <div class="table-cell">
-                <div class="container">
-                    <h1 class="intro-title mb-4">Harbhajan Singh</h1>
-                    <p class="intro-subtitle">
-                        <span class="text-slider-items">
-                            Data Scientist, Machine Learning Engineer, AI Engineer, Data Engineer, Data Analyst
-                        </span>
-                        <strong class="text-slider"></strong>
-                    </p>
-                </div>
-            </div>
-        </div>
+  
+<div id="home" class="intro route bg-image" style="background-image: url('assets/img/Extras/dashboard.png');">
+  <div class="overlay-itro"></div>
+  <div class="intro-content display-table">
+      <div class="table-cell">
+          <div class="container">
+              <h1 class="intro-title mb-4">Harbhajan Singh</h1>
+              <p class="intro-subtitle">
+                  <span class="text-slider-items">
+                      Data Scientist, Machine Learning Engineer, AI Engineer, Data Analyst, Data Engineer
+                  </span>
+                  <strong class="text-slider"></strong>
+              </p>
+          </div>
+      </div>
   </div>
+</div>
 
-  <script>
-    const images = ['Portfolio0.png', 'Portfolio1.png', 'Portfolio2.png', 'Portfolio3.png', 'Portfolio4.png', 'Portfolio5.png', 'Portfolio6.png', 'Portfolio7.png']; // Add your image filenames here
-        let currentIndex = 0;
 
-        function changeImage() {
-            const imageUrl = 'assets/img/Extras/' + images[currentIndex]; // Assuming images are located in "Slider" folder
-            const homeElement = document.getElementById('home');
-            
-            homeElement.style.transition = 'background-image 0.5s ease-in-out'; // Add transition for smoothness
-            homeElement.style.backgroundImage = `url(${imageUrl})`;
-            currentIndex = (currentIndex + 1) % images.length;
-        }
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".owl-carousel").owlCarousel({
+				loop:true,
+				margin:10,
+				nav:true,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:3
+					},
+					1000:{
+						items:3
+					}
+				}
+			});
+		});
+	</script>
 
-        setInterval(changeImage, 3000); // Change image every 3 seconds
-  </script>
+
 
   <main id="main">
 
@@ -129,12 +140,12 @@
                       <li>Database Tools: MSSQL, MySQL, MongoDB, Impala</li>
                       <li>Visualization Tools: Tableau, Power BI, Google Data Studio, MS-Excel, Python Libraries</li>
                       <li>Tools: Talend, Jupyter NoteBook, RStudio, Anaconda, SSMS, Google Colab, MS-Suite, JIRA, Prompt Flow, Azure OpenAI Services, Azure AI Services, Azure Copilot Studio, Azure Power Apps, Azure Fabrics</li>
-                      <li>Cloud Deployment: Google App Engine, Microsoft Azure, Google Cloud Platform</li>
+                      <li>Cloud Deployment: Google Cloud Platform, Google App Engine, Microsoft Azure</li>
                       </ul>
                     <div class="progress">
                        </div>
                        <p class="title-s">Software</p>
-                       <span>Spyder, PyCharm, Jupyter, MATLAB, VS Code, Microsoft Office</span> <span class="pull-right"></span>
+                       <span>Anaconda, Spyder, PyCharm, Jupyter Notebook, Colab Notebook, Databricks, VS Code, Microsoft Office</span> <span class="pull-right"></span>
                        <div class="progress">
                          </div>
                          
@@ -487,28 +498,70 @@
       </div>
     </section>
 
-    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+    <div class="testimonials paralax-mf bg-image" style="background-color: rgb(0, 0, 0);">
       <div class="overlay-mf"></div>
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div id="testimonial-mf" class="owl-carousel owl-theme">
-              <div class="testimonial-box">
-                <div class="content-test">
-                  <p class="description lead">
-                    “Entrepreneurship is the art of seeing beyond the linear, and diving into the realms of exponential possibilities. Just as Steve Jobs, the visionary behind Apple, remarked, 'Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.' Great work, in the realm of entrepreneurship, involves breaking free from constraints and unleashing the exponential potential that lies within. I am driven to embark on this journey of exponential impact and contribute to shaping a future that defies the ordinary." 
-                  </p>
-                  <p class="description lead">
-                    - Steve Jobs
-                  </p>
-                  <span class="comit"><i class="fa fa-quote-right"></i></span>
-                </div>
-              </div> 
+          <div class="row">
+              <div class="col-md-12">
+                  <div id="testimonial-mf" class="owl-carousel owl-theme">
+                      <!-- Recommendation 1 -->
+                      <div class="testimonial-box">
+                          <div class="content-test">
+                              <p class="description lead">
+                                  "Harbhajan has good knowledge in Machine Learning and Data Science. He has worked on numerous projects related to data science. And he has natural acumen for data and finding patterns in it. His ability to come up with quick solution for a problem in data science is out standing. I wish him luck in his future endeavours. I am sure he will be a valuable asset to which ever company he works in."
+                              </p>
+                              <p class="description lead">
+                                  - Kumar Siddharth, Data Scientist at Wipro India
+                              </p>
+                              <span class="comit"><i class="fa fa-quote-right"></i></span>
+                          </div>
+                      </div>
+  
+                      <!-- Recommendation 2 -->
+                      <div class="testimonial-box">
+                          <div class="content-test">
+                              <p class="description lead">
+                                  "Harbhajan and I worked together for the data analytics team of leading investment bank. He worked on different technologies such as python, sql, tableau, machine learning and possessed his exceptional technical skills. Also he is a good communicator. I wish him all the best for all his future endeavors."
+                              </p>
+                              <p class="description lead">
+                                  - Dhananjay Hawal, Senior Data Analyst at TCS India
+                              </p>
+                              <span class="comit"><i class="fa fa-quote-right"></i></span>
+                          </div>
+                      </div>
+  
+                      <!-- Recommendation 3 -->
+                      <div class="testimonial-box">
+                        <div class="content-test">
+                            <p class="description lead">
+                                "Harbhajan is really a hard working, polite & dedicated ML Engineer. He created several ML & computer vision applications which helped the company reach a new growth. He used to dig into problems & work onto it until & unless he finds the solution. I recommend him for having a person in your team/company if you are looking for a self learner & who is really passionate & loyal for his work. Thanks man! for all your hard work you did for Artifutech."
+                            </p>
+                            <p class="description lead">
+                                - Rahul Kumar, Founder at ARTIFUTECH India Private Limited
+                            </p>
+                            <span class="comit"><i class="fa fa-quote-right"></i></span>
+                        </div>
+                      </div>
+
+                      <!-- Recommendation 4 -->
+                      <div class="testimonial-box">
+                        <div class="content-test">
+                            <p class="description lead">
+                                "Harbhajan is one of the best among all people I have ever met and is a loyal colleague, understands complex matters.Harbhajan is a strong and goal oriented team player; with every problem there was a solution. Highly recommended."
+                            </p>
+                            <p class="description lead">
+                                - Lokesh Singh Raghav, Senior Data Engineer at Technodata Analytics Services
+                            </p>
+                            <span class="comit"><i class="fa fa-quote-right"></i></span>
+                        </div>
+                      </div>
+  
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
+    </div>
+  
 
     <section id="blog" class="blog-mf sect-pt4 route">
       <div class="container">
@@ -593,8 +646,11 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
+      <div class="row">
+      <div class="col-md-12">
+			<div class="service-carousel">
+			  <div class="owl-carousel owl-theme"> <!--Changes -->
+			    <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.linkedin.com/learning/certificates/fa2087766077b72f60676fed7785236d24354f88204f7b916578ee2f699a32b1?u=56973065"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -607,7 +663,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.cloudskillsboost.google/public_profiles/1da121c2-82a9-41d9-9be8-110251116ced/badges/4030419"><img src="assets/img/Certi/google.png" alt="" class="img-fluid"></a>
@@ -618,9 +675,10 @@
                   Issued Jun 2023
                 </p>
               </div>
-            </div>
+			</div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.linkedin.com/learning/certificates/251b34049ea71a9740e17592b8ccefcbc1e74555bf52d6e525480ee868629612?u=56973065"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -633,7 +691,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.linkedin.com/learning/certificates/195989e272927917821533811929c0de67184f3c69b780ff2f33387d504ee459?u=56973065"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -646,7 +705,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.linkedin.com/learning/certificates/628b4d724a5cde7db338218fabf1efef1a2709bf1be5bb2ae85cdb1c43f9dc38?u=56973065"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -659,7 +719,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.linkedin.com/learning/certificates/be0042f9cd76a28f5c55914755f40d2f647c7fe0e2a649be82bbb4e4c91fcdf3?u=56973065"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -672,7 +733,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -685,7 +747,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -698,7 +761,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.udemy.com/certificate/UC-011d69a0-4a40-4678-bde2-23769bec3214/"><img src="assets/img/Certi/udemy.png" alt="" class="img-fluid"></a>
@@ -712,7 +776,7 @@
             </div>
           </div>
         
-          <div class="col-md-4">
+          <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.udemy.com/certificate/UC-edc4c51b-f778-4131-9ba6-954522f25d93/"><img src="assets/img/Certi/udemy.png" alt="" class="img-fluid"></a>
@@ -725,7 +789,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+		  
+          <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://drive.google.com/file/d/1scPCxIPnqSPDOhjgdl_lK_QgifXnQ7e5/view"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -739,7 +804,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://drive.google.com/file/d/1a8Igjq9tOqk9Lgs3j6sHV_9M28pVrPEo/view"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -753,7 +818,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://drive.google.com/file/d/12ic3NBwJzQb-baZ52oa1ylXEEvK9-qff/view"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -767,7 +832,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://drive.google.com/file/d/1jrLqy-3C5g8IxVtCvklzZ5cyZaRHJTmC/view"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -781,7 +846,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://drive.google.com/file/d/1okkXwWEzJWqq8zzdIOy9EqTcAcrR0AHn/view"><img src="assets/img/Certi/link.png" alt="" class="img-fluid"></a>
@@ -795,7 +860,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.datacamp.com/statement-of-accomplishment/course/a8ad33eca5a42e38a1b93395f75125aab400c8ba"><img src="assets/img/Certi/datac.png" alt="" class="img-fluid"></a>
@@ -809,7 +874,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.datacamp.com/statement-of-accomplishment/course/e3f9b044e079094c9c171b2cc08b1520e9550338"><img src="assets/img/Certi/datac.png" alt="" class="img-fluid"></a>
@@ -823,7 +888,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.datacamp.com/statement-of-accomplishment/course/3034426e17a0fddd4ea66d66ad5e40cde5826454"><img src="assets/img/Certi/datac.png" alt="" class="img-fluid"></a>
@@ -837,7 +902,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.udemy.com/certificate/UC-ec26c365-2a66-445e-bbfe-149f129a7304/"><img src="assets/img/Certi/udemy.png" alt="" class="img-fluid"></a>
@@ -851,7 +916,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.credential.net/9366d102-4ceb-42c7-9bcf-bc78bbd8d34c#gs.4hm1jk"><img src="assets/img/Certi/ms.png" alt="" class="img-fluid"></a>
@@ -865,7 +930,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.udemy.com/certificate/UC-HWEIGTIK/"><img src="assets/img/Certi/udemy.png" alt="" class="img-fluid"></a>
@@ -879,7 +944,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.udemy.com/certificate/UC-XNMIGX9D/"><img src="assets/img/Certi/udemy.png" alt="" class="img-fluid"></a>
@@ -893,7 +958,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://courses.cognitiveclass.ai/certificates/029186e1376a4eb9aab4d8f560b7e488"><img src="assets/img/Certi/cognit.png" alt="" class="img-fluid"></a>
@@ -907,7 +972,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.coursera.org/account/accomplishments/verify/55RBVUN987ZZ"><img src="assets/img/Certi/coursera.png" alt="" class="img-fluid"></a>
@@ -921,7 +986,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://analytics.google.com/analytics/academy/certificate/7--sNMsZTEOAJjvG-rZxuQ"><img src="assets/img/Certi/google.jpg" alt="" class="img-fluid"></a>
@@ -935,7 +1000,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.credential.net/d072fdfc-1493-4b9e-bfce-0aee027fad14#gs.4hjwmw"><img src="assets/img/Certi/ms.png" alt="" class="img-fluid"></a>
@@ -949,7 +1014,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.coursera.org/account/accomplishments/verify/SXZTKWVQF9QR"><img src="assets/img/Certi/coursera.png" alt="" class="img-fluid"></a>
@@ -963,7 +1028,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.coursera.org/account/accomplishments/verify/A28NHALGAZ48"><img src="assets/img/Certi/coursera.png" alt="" class="img-fluid"></a>
@@ -977,7 +1042,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.coursera.org/account/accomplishments/verify/JHB8XPKZEHQX"><img src="assets/img/Certi/coursera.png" alt="" class="img-fluid"></a>
@@ -991,7 +1056,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://www.coursera.org/account/accomplishments/verify/2XL9WHE6FM6N"><img src="assets/img/Certi/coursera.png" alt="" class="img-fluid"></a>
@@ -1005,7 +1070,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://analytics.google.com/analytics/academy/certificate/Txn9CkCbSNaxhXDwVwEc4g"><img src="assets/img/Certi/google.jpg" alt="" class="img-fluid"></a>
@@ -1019,7 +1084,7 @@
             </div>
           </div>
 		  
-		  <div class="col-md-4">
+		  <div class="item">
             <div class="service-box">
               <div class="work-img">
                 <a href="https://drive.google.com/file/d/1PTty4Tjh5DW96bLETROr--fnROgi39oz/view?usp=drive_link"><img src="assets/img/Certi/vm.jpg" alt="" class="img-fluid"></a>
@@ -1032,12 +1097,13 @@
               </div>
             </div>
           </div>
-
         </div>
+			</div>
+      </div>
       </div>
     </section>
 
-    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
+    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-color: rgb(0, 0, 0);">
       <div class="overlay-mf"></div>
       <div class="container">
         <div class="row">
