@@ -105,6 +105,22 @@
 		});
 	</script>
 
+  <script>
+    function popup(element) {
+        var popupContent = element.querySelector("#popup-content");
+        var popup = document.querySelector("#popup");
+        popup.innerHTML = popupContent.innerHTML;
+        popup.style.display = "block";
+    }
+    function closePopup() {
+        var popupContent = document.querySelector("#popup-content");
+        popupContent.style.display = "none";
+        var popup = document.querySelector("#popup");
+        popup.innerHTML = "";
+        popup.style.display = "none";
+    }
+</script>
+
 
 
   <main id="main">
@@ -162,10 +178,10 @@
                     
                     <p class="lead">
                       Hi there! 
-					  I'm Harbhajan Singh, a passionate Data Scientist, AI Engineer & Entrepreneur with a Master's degree in Artificial Intelligence from the University of Windsor.
+					  I'm Harbhajan Singh, a passionate Computer Science engineer & entrepreneur with a Master's degree in Applied Computing specialized in Artificial Intelligence from the University of Windsor.
                     </p>
                     <p class="lead">
-                      I'm a 3x Kaggle Expert in Notebooks, Datasets and Discussions - an achievement that reflects my dedication to honing my data science skills and sharing insights with the community. Currently, I'm working as an AI Developer at Agriculture and Agri-Food Canada - Government of Canada. I'm working on some recent trending topics of LLMs and RAG based applications. Previously, I worked as a Data Analyst at Tata Consultancy Services, where I had the opportunity to collaborate with talented data scientists on creating innovative solutions. My role allowed me to develop strong leadership abilities while working in a team environment.
+                      I'm a 3x Kaggle Expert in Notebooks, Datasets and Discussions - an achievement that reflects my dedication to honing my data science skills and sharing insights with the community. Previously, I worked as a Data Analyst at Tata Consultancy Services, where I had the opportunity to collaborate with talented data scientists on creating innovative solutions. My role allowed me to develop strong leadership abilities while working in a team environment.
                     </p>
                     <p class="lead">
                       My enthusiasm for coding started early and has only grown over time, especially in the domains of data science and data analysis. My professional experiences at companies like Technodata and Artifutech have provided invaluable first-hand insight into how technology can enable businesses. As we witness the expanding integration of business and information technology, I'm committed to effectively bridging the gap between the two by leveraging my expertise.
@@ -266,239 +282,482 @@
           </div>
         </div>
 	      
-        <div class="row">
-	    <div class="col-md-4">
-	        <div class="work-box" style="border-radius: 1rem">
-	            <div class="work-img">
-	                <img src="assets/img/Work Experience/AAFC_logo.png" alt="" class="img-fluid"></a>
-	                    <!-- Corrected: Removed premature closing tag </a> -->
-			    </div>
-	                </a>
-	            
-	            <div class="work-content">
-	                <div class="row">
-	                    <div class="col-sm-10">
-	                        <h2 class="w-title"> AI Developer <br> Agriculture and Agri-Food Canada </h2>
-	                        <div class="w-more">
-	                            <span class="w-date">Jan 2024 - Present</span>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-
-	    <div class="col-md-4">
-		<div class="work-box" style="border-radius: 1rem">
-		    <div class="work-img">
-			<img src="assets/img/Work Experience/voiceflip_200.png"  alt="" class="img-fluid"></a>
-			    <!-- Corrected: Removed premature closing tag </a> -->
-			    </div>
-			</a>
-		    
-		    <div class="work-content">
-			<div class="row">
-			    <div class="col-sm-10">
-				<h2 class="w-title"> Data Scientist (Part-Time)<br> VoiceFlip </h2>
-				<div class="w-more">
-				    <span class="w-date">Sep 2023 - Present</span>
-				</div>
-			    </div>
-			</div>
-		    </div>
-		</div>
-	    </div>
-	
-		  
-		<div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <a href="https://www.upwork.com/freelancers/~01ed67c71797baae37?viewMode=1&s=1110580759050571776"><img src="assets/img/Work Experience/upwork.png" alt="" class="img-fluid"></a>
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-10">
-                    <h2 class="w-title"> Data Scientist <br> Freelancer</h2>
-                    <div class="w-more">
-                      <span class="w-date">Nov 2022 - Present</span>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
+  <div class="row">
+    <!-- AAFC -->
+    <div class="col-md-4">
+        <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+            <div class="work-img">
+                <img src="assets/img/Work Experience/AAFC_logo.png" alt="" class="img-fluid">
             </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/tcs.png" alt="" class="img-fluid"></a>
-                </div>
-              </a>
-              <div class="work-content">
+            <div class="work-content">
                 <div class="row">
-                  <div class="col-sm-10">
-                    <h2 class="w-title"> Data Analyst <br> Tata Consultancy Services</h2>
-                    <div class="w-more">
-                      <span class="w-date">May 2021 - Nov 2022</span>
+                    <div class="col-sm-12">
+                        <h2 class="w-title">AI Developer
+                            <br> Agriculture and Agri-Food Canada
+                        </h2>
+                        <div class="w-more">
+                            <span class="w-date">Jan 2024 - Present</span>
+                        </div>
                     </div>
-                  </div>
-                  
                 </div>
-              </div>
             </div>
-          </div>
-          
-          <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/artifutech.jpg" alt="" class="img-fluid">
+            <div id="popup-content" style="display: none">
+                <h2 class="w-title">AI Developer
+                    <br> Agriculture and Agri-Food Canada
+                </h2>
+                <div class="w-more">
+                    <span class="w-date">Jan 2024 - Present</span>
                 </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Machine Learning Engineer <br> Artifutech Private Limited</h2>
-                    <div class="w-more">
-                       <span class="w-date">Feb 2021 - May 2021</span>
-                    </div>
-                  </div>
-                  
+                <div>
+                    <p>• Developing and implementing automated test scripts for a chatbot utilizing Azure OpenAI services, including Prompt Flow,
+                      Semantic Kernel, LangChain, and Power Automate, to enhance the functionality and efficiency of the system.</p>
+                    <p>• Contributing to the improvement of chatbot performance and user experience by leveraging innovative AI technologies,
+                      demonstrating proficiency in test automation methodologies and tools within a collaborative team environment.</p>
                 </div>
-              </div>
+                <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                    Close
+                </button>
             </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/td.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Data Engineer <br> Technodata Analytics Services</h2>
-                    <div class="w-more">
-                       <span class="w-date">May 2020 - Jan 2021</span>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-		  
-		  <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/kpmg.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Data Analytics Consulting Internship <br> KPMG Australia</h2>
-                    <div class="w-more">
-                       <span class="w-date">Apr 2020 - Apr 2020</span>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/otpl.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Data Science Intern <br> Optimal Transnational Private Limited</h2>
-                    <div class="w-more">
-                       <span class="w-date">May 2019 - Jul 2019</span>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-		  
-		  <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/cog.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Student Partner <br> Cognizance, IIT Roorkee</h2>
-                    <div class="w-more">
-                       <span class="w-date">Jan 2019 - Jun 2019</span>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/otpl.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Data Analysis Intern <br> Optimal Transnational Private Limited</h2>
-                    <div class="w-more">
-                       <span class="w-date">May 2018 - Jul 2018</span>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box" style="border-radius: 1rem">
-                <div class="work-img">
-                  <img src="assets/img/Work Experience/GU.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h2 class="w-title">Data Science Researcher <br> Galgotias University</h2>
-                    <div class="w-more">
-                       <span class="w-date">Jan 2018 - Dec 2019</span>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-2">
-          </div>
-          <!-- <div class="col-md-2"></div> -->
-          
         </div>
+    </div>
+    <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+        transform: translate(-50%, -50%); background-color: rgb(168, 218, 246);
+        padding: 20px; border-radius: 1rem; z-index: 1;">
+    </div>
+    
+    <!-- Voiceflip -->
+    <div class="col-md-4">
+        <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+            <div class="work-img">
+                <img src="assets/img/Work Experience/voiceflip_200.png" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="w-title"> Data Scientist (Part-Time)<br> VoiceFlip 
+                        </h2>
+                        <div class="w-more">
+                            <span class="w-date">Sep 2023 - Present</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popup-content" style="display: none">
+                <h2 class="w-title"> Data Scientist (Part-Time)<br> VoiceFlip 
+                </h2>
+                <div class="w-more">
+                    <span class="w-date">Sep 2023 - Present</span>
+                </div>
+                <div>
+                    <p>• Spearheaded the development of a pioneering product tailored for the real estate sector, enabling seamless document processing.</p>
+                    <p>• Leveraging OCR techniques, I engineered a robust solution capable of accurately extracting data from both standard and scanned PDF documents.</p>
+                    <p>• Integrated advanced NLP algorithms for spell-checking and post-processing such as Question & Answering, Location Search etc., and ensured the delivery of high-quality, error-free data ready for user utilization.</p>
+                </div>
+                <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+        transform: translate(-50%, -50%); background-color: white;
+        padding: 20px; border-radius: 1rem; z-index: 1;">
+    </div>
+    
+    <!-- Upwork -->
+    <div class="col-md-4">
+      <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+          <div class="work-img">
+            <a href="https://www.upwork.com/freelancers/~01ed67c71797baae37?viewMode=1&s=1110580759050571776"><img src="assets/img/Work Experience/upwork.png" alt="" class="img-fluid"></a>
+          </div>
+          <div class="work-content">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <h2 class="w-title"> Data Scientist (Freelancer)<br> UpWork 
+                      </h2>
+                      <div class="w-more">
+                          <span class="w-date">Nov 2022 - Present</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="popup-content" style="display: none">
+              <h2 class="w-title"> Data Scientist (Freelancer)<br> UpWork 
+              </h2>
+              <div class="w-more">
+                  <span class="w-date">Nov 2022 - Present</span>
+              </div>
+              <div>
+                  <p>• As a freelance data scientist, I've had the privilege to work with a diverse range of clients, applying my skills in data science and artificial intelligence to solve real-world problems.</p>
+                  <p>• From building predictive models to uncovering actionable insights, I've been dedicated to delivering solutions that drive tangible results and exceed client expectations.</p>
+                  <p>• I'm passionate about leveraging my expertise in data science and artificial intelligence to help clients achieve their goals and achieve their goals.
+              </div>
+              <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                  Close
+              </button>
+          </div>
       </div>
-    </section>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
 
-    <div class="testimonials paralax-mf bg-image" style="background-color: rgb(0, 0, 0);">
+  <!-- Tata Consultancy Services -->
+  <div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/tcs.png" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Data Analyst
+                        <br> Tata Consultancy Services 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">May 2021 - Nov 2022 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Data Analyst
+                <br> Tata Consultancy Services 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">May 2021 - Nov 2022 </span>
+            </div>
+            <div>
+                <p>• Collaborated with stakeholders and reporting & analytics team at a leading global investment banking and financial services
+                  firm (Credit-Suisse) to construct and deploy data-driven solutions using Python, SQL, and other tools & software.</p>
+                <p>• Designed and accomplished metadata pipelines to efficiently store and process large data sets by improving performance,
+                  empowering data scientists to formulate predictive models and forecasts for customer queries and solutions.</p>
+                <p>• Led & managed value-added projects, including the development of a rule-based Chatbot by utilizing NLP techniques and the
+                  creation of two innovative products i.e. SQL checklist matching and JIRA monitoring, and achieved high accuracy and efficiency.</p>
+                <p>• Applied a range of tools and technologies including Tableau, DataLake, and Azure Clouds to perform exploratory data analysis,
+                  feature engineering, and model training and evaluation for a variety of business use cases.</p>
+                <p>• Applied Time Series forecasting to predict the number of requests and reports raised and requested by users & customers.</p>
+                <p>• Leveraged AI and ML to produce reports, resulting in an 85% reduction in manual efforts for business analysts and customers.</p>
+                <p>• Enhanced and optimized data processing and data modeling workflows to ensure maximum efficiency (increased efficiency by
+                  90%) and accuracy while working alongside cross-functional teams to propel business outcomes and solve complex problems.</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
+  
+  <!-- Artifutech -->
+  <div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/artifutech.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Machine Learning Engineer
+                        <br> Artifutech Private Limited 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">Feb 2021 - May 2021 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Machine Learning Engineer
+                <br> Artifutech Private Limited 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">Feb 2021 - May 2021 </span>
+            </div>
+            <div>
+                <p>• Developed and executed computer vision algorithms for image processing and anomaly detection leveraging camera feeds.</p>
+                <p>• Implemented a Face AI application predicting wrinkles, dark circles, age, skin glow, and dark spots on human faces and achieved
+                  accuracy up to 93.50%.</p>
+                <p>• Deployed 7 web-based Artificial Intelligence and Machine Learning applications on the Heroku server.</p>
+                <p>• Led end-to-end deployment of deep learning models on cloud platforms, specifically on Azure and Google Cloud</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
+  
+  <!-- Technodata -->
+	<div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/td.png" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Data Engineer 
+                      <br> Technodata Analytics Services 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">May 2020 - Jan 2021 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Data Engineer 
+              <br> Technodata Analytics Services 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">May 2020 - Jan 2021 </span>
+            </div>
+            <div>
+                <p>• Produced reports with the help of SQL Server, MySQL, Talend ETL Tool, and created dashboards to visualize dataset for
+                  healthcare and manufacturing clients based on specific requirements. Improved customer feedback and suggestions.</p>
+                <p>• Proposed and contributed to two value-added projects, including a customer retention program in e-commerce and a
+                  web-based duplicate checker tool. Used Python for coding and worked on code review.</p>
+                <p>• Leveraged advanced machine learning and statistical techniques to design and evaluate algorithms for improving model
+                  performance, quality, and accuracy up to 96.25%.</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
+  
+  <!-- KPMG -->
+  <div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/kpmg.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Data Analytics Consulting Internship 
+                      <br> KPMG Australia 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">Apr 2020 - Apr 2020 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Data Analytics Consulting Internship 
+              <br> KPMG Australia 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">Apr 2020 - Apr 2020 </span>
+            </div>
+            <div>
+                <p>• Data Quality Assessment (Assessment of data quality and completeness in preparation for analysis)
+                  (i) Perform Data Quality Analysis and Analytical Dashboard Creation</p>
+                <p>• Data Insights (Targeting high-value customers based on customer demographics and attributes)
+                  (i) Perform Data Analytics and Customer Segmentation based on demographics</p>
+                <p>• Perform Data Visualisations and make Data Dashboards on Tableau for the presentations</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
+  
+	<!-- Optimal Transnational Private Limited -->
+	<div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/otpl.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Data Science Intern 
+                      <br> Optimal Transnational Private Limited 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">May 2019 - Jul 2019 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Data Science Intern 
+              <br> Optimal Transnational Private Limited 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">May 2019 - Jul 2019 </span>
+            </div>
+            <div>
+                <p>• Conducted ETL operations to extract and transform market data from various sources, including LinkedIn, through iMacros and
+                  Python to support the LinkedIn campaigns.,</p>
+                <p>• Utilized Python and SQL (Relational Database) to analyze and clean data and worked alongside diverse teams to generate
+                  reports, including predictive analytics to forecast sales and enhance profitability for client’s e-commerce business.</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
+  
+  <!-- Cognizance IIT Roorkee -->
+  <div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/cog.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Student Partner 
+                      <br> Cognizance, IIT Roorkee 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">Jan 2019 - Jun 2019 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Student Partner 
+              <br> Cognizance, IIT Roorkee 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">Jan 2019 - Jun 2019 </span>
+            </div>
+            <div>
+              <p>• As a Student Ambassadors, I helped in spreading the word about Cognizance and expand the outreach to every region of the country.</p>
+              <p>• Member of the Student Partnership Programme (SPP) of IIT-Roorkee.</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
+  
+  <!-- Optimal Transnational Private Limited -->
+  <div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/otpl.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Data Analysis Intern 
+                      <br> Optimal Transnational Private Limited 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">May 2018 - Jul 2018 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Data Analysis Intern 
+              <br> Optimal Transnational Private Limited 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">May 2018 - Jul 2018 </span>
+            </div>
+            <div>
+                <p>• Handled complex datasets using Python and learned to clean data by appropriate methods.</p>
+                <p>• Parallelly performed Join operations on multiple datasets to form the data into the desired format using SQL.</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
+  
+  <!-- Galgotias University -->
+  <div class="col-md-4">
+    <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+        <div class="work-img">
+            <img src="assets/img/Work Experience/GU.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="work-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="w-title">Data Science Researcher 
+                      <br> Galgotias University 
+                    </h2>
+                    <div class="w-more">
+                        <span class="w-date">Jan 2018 - Dec 2019 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="popup-content" style="display: none">
+            <h2 class="w-title">Data Science Researcher 
+              <br> Galgotias University 
+            </h2>
+            <div class="w-more">
+                <span class="w-date">Jan 2018 - Dec 2019 </span>
+            </div>
+            <div>
+                <p>• As a Data Science Researcher at Galgotias University, I successfully authored and published two impactful research papers in the dynamic realms of data science and artificial intelligence.</p>
+                <p>• These contributions underscore my commitment to advancing knowledge in these fields and solidify my expertise as a researcher dedicated to innovation and excellence.</p>
+            </div>
+            <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                Close
+            </button>
+        </div>
+    </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>         
+      <div class="col-md-2">
+      </div>  
+    </div>
+  </div>
+  </section>
+
+    <div class="testimonials paralax-mf bg-image" style="background-color: #0078ff;">
       <div class="overlay-mf"></div>
       <div class="container">
           <div class="row">
@@ -1103,7 +1362,8 @@
       </div>
     </section>
 
-    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-color: rgb(0, 0, 0);">
+    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-color: #0078ff;">
+      <center>
       <div class="overlay-mf"></div>
       <div class="container">
         <div class="row">
@@ -1114,10 +1374,13 @@
               
                   </div>
                   <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="title-box text-center">
+                      <h5 class="title-a">
                         Contact
                       </h5>
+                      <div class="line-mf"></div>
+                    </div>
                     </div>
                     <div class="more-info">
                       <ul class="list-ico">
@@ -1133,13 +1396,24 @@
                         <li><a href="https://huggingface.co/harbhajan21" target="_blank"><span class="ico-circle"><img class="img-fluid w-60" src="assets/img/Footer/hflogo.png"></img></span></a></li>
                       </ul>
                     </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="copyright-box">
+                          <p class="copyright">&copy; Copyright <strong>Harbhajan Singh</strong>. All Rights Reserved</p>
+                          <!-- <div class="credits">
+                            Designed by <a href="https://harbhajan21.github.io/hs21.github.io/"><strong>Harbhajan Singh</strong></a>
+                          </div> -->
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      
       </div>
+      </center>
     </section>
 
   </main>
