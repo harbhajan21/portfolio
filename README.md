@@ -1,6 +1,6 @@
 ## Portfolio Repository
 
-Welcome to my portfolio repository! You can access my portfolio by following this link: [Portfolio Link](https://harbhajan21.github.io/hs21.github.io/)
+Welcome to my portfolio repository! You can access my portfolio by following this link: [Portfolio Link](https://harbhajan21.github.io/portfolio/)
 
 ## Acknowledgments
 
