@@ -58,10 +58,21 @@
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#contact">Contact</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#" onclick="downloadResume()">Download Resume</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+  <script>
+    function downloadResume() {
+      var resumeLink = document.createElement('a');
+      resumeLink.href = 'assets/Harbhajan_Singh_Resume.pdf';
+      resumeLink.download = 'resume.pdf';
+      resumeLink.click();
+    }
+  </script>
 
   
 <div id="home" class="intro route bg-image" style="background-image: url('assets/img/Extras/dashboard.png');">
