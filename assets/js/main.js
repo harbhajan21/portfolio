@@ -147,4 +147,20 @@
     });
   });
 
+  // Flip div with class work-box on click of button with class btn-flip
+  $('.btn-flip').on('click', function() {
+    $(this).parents('.work-box').toggleClass('flipped');
+    $(this).parents('.content-front').toggleClass('d-none');
+    document.getElementsByClassName('content-back')[0].classList.toggle('d-none');
+  });
+
+  // Flip div with class work-box on click of button with class btn-flip
+  $('.btn-flip-close').on('click', function() {
+    $(this).parents('.work-box').toggleClass('flipped');
+    $(this).parents('.work-box').toggleClass('flipped-back');
+    $(this).parents('.content-back').toggleClass('d-none');
+    document.getElementsByClassName('content-front')[0].classList.toggle('d-none');
+  });
+  
+
 })(jQuery);
