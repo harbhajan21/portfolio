@@ -75,20 +75,31 @@
   </script>
 
 <!--   Visitor Count -->
-  <script>
-  // Check if the counter exists in local storage
-  if(localStorage.getItem('visitorCount')) {
-    // If it exists, increment the counter
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Check if visitor count exists in localStorage
+  if (localStorage.getItem('visitorCount')) {
+    // If it exists, retrieve and update the count
     var count = parseInt(localStorage.getItem('visitorCount'));
-    count++;
-    localStorage.setItem('visitorCount', count);
-    document.getElementById('count').innerText = count;
+    updateVisitorCount(count);
   } else {
-    // If it doesn't exist, initialize the counter with 1
-    localStorage.setItem('visitorCount', 1);
-    document.getElementById('count').innerText = 1;
+    // If it doesn't exist, initialize count to 0
+    var count = 0;
   }
-  </script>
+
+  // Increment visitor count and update display
+  count++;
+  updateVisitorCount(count);
+
+  // Store updated count in localStorage
+  localStorage.setItem('visitorCount', count);
+  });
+
+function updateVisitorCount(count) {
+  var countElement = document.getElementById('visitor-count');
+  countElement.textContent = count;
+}
+</script>
 
   
 <div id="home" class="intro route bg-image" style="background-image: url('assets/img/Extras/dashboard.png');">
@@ -1426,7 +1437,7 @@
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="copyright-box">
-			  <p id="visitor-counter">Visitors: <span id="count">0</span></p>
+			  <p id="visitor-counter">Visitors: <span id="visitor-count">0</span></p>
                           <p class="copyright">&copy; Copyright <strong>Harbhajan Singh</strong>. All Rights Reserved</p>
                           <!-- <div class="credits">
                             Designed by <a href="https://harbhajan21.github.io/hs21.github.io/"><strong>Harbhajan Singh</strong></a>
