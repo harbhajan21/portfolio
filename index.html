@@ -345,7 +345,7 @@ function updateVisitorCount(count) {
             <div class="work-content">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2 class="w-title">Senior Data Analyst 
+                        <h2 class="w-title">Data Scientist (Senior Analyst) 
                             <br> TD Securities Canada
                         </h2>
                         <div class="w-more">
@@ -355,7 +355,7 @@ function updateVisitorCount(count) {
                 </div>
             </div>
             <div id="popup-content" style="display: none">
-                <h2 class="w-title">Senior Data Analyst
+                <h2 class="w-title">Data Scientist (Senior Analyst)
                     <br>  TD Securities Canada
                 </h2>
                 <div class="w-more">
@@ -422,6 +422,45 @@ function updateVisitorCount(count) {
         padding: 20px; border-radius: 1rem; z-index: 1;">
     </div>
 
+    <!-- Upwork -->
+    <div class="col-md-4">
+      <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
+          <div class="work-img">
+            <a href="https://www.upwork.com/freelancers/~01ed67c71797baae37?viewMode=1&s=1110580759050571776"><img src="assets/img/Work Experience/upwork.png" alt="" class="img-fluid"></a>
+          </div>
+          <div class="work-content">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <h2 class="w-title"> Data Scientist (Freelancer)<br> UpWork 
+                      </h2>
+                      <div class="w-more">
+                          <span class="w-date">Nov 2022 - Present</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="popup-content" style="display: none">
+              <h2 class="w-title"> Data Scientist (Freelancer)<br> UpWork 
+              </h2>
+              <div class="w-more">
+                  <span class="w-date">Nov 2022 - Present</span>
+              </div>
+              <div>
+                  <p>• As a freelance data scientist, I've had the privilege to work with a diverse range of clients, applying my skills in data science and artificial intelligence to solve real-world problems.</p>
+                  <p>• From building predictive models to uncovering actionable insights, I've been dedicated to delivering solutions that drive tangible results and exceed client expectations.</p>
+                  <p>• I'm passionate about leveraging my expertise in data science and artificial intelligence to help clients achieve their goals and achieve their goals.
+              </div>
+              <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
+                  Close
+              </button>
+          </div>
+      </div>
+  </div>
+  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); background-color: white;
+      padding: 20px; border-radius: 1rem; z-index: 1;">
+  </div>
+
 	  
     <!-- AAFC -->
     <div class="col-md-4">
@@ -436,7 +475,7 @@ function updateVisitorCount(count) {
                             <br> Agriculture and Agri-Food Canada
                         </h2>
                         <div class="w-more">
-                            <span class="w-date">Jan 2024 - Present</span>
+                            <span class="w-date">Jan 2024 - May 2024</span>
                         </div>
                     </div>
                 </div>
@@ -449,7 +488,7 @@ function updateVisitorCount(count) {
                     <span class="w-date">Jan 2024 - May 2024</span>
                 </div>
                 <div>
-                    <p>• Worked on a RAG-based chatbot project, AgPal, automating test scripts using Azure OpenAI services, including Prompt Flow,
+                    <p>• Worked on a RAG-based chatbot project, AgPal(https://agpal.ca/en/home), automating test scripts using Azure OpenAI services, including Prompt Flow,
 			Semantic Kernel, LangChain, and Power Automate, to enhance system functionality and efficiency.</p>
                     <p>• Utilized Prompt Flow to manage project workflows and test the accuracy of LLM responses, ensuring robust chatbot
 			performance based on GroundTruth and Groundness score.</p>
@@ -513,45 +552,7 @@ function updateVisitorCount(count) {
         padding: 20px; border-radius: 1rem; z-index: 1;">
     </div>
     
-    <!-- Upwork -->
-    <div class="col-md-4">
-      <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
-          <div class="work-img">
-            <a href="https://www.upwork.com/freelancers/~01ed67c71797baae37?viewMode=1&s=1110580759050571776"><img src="assets/img/Work Experience/upwork.png" alt="" class="img-fluid"></a>
-          </div>
-          <div class="work-content">
-              <div class="row">
-                  <div class="col-sm-12">
-                      <h2 class="w-title"> Data Scientist (Freelancer)<br> UpWork 
-                      </h2>
-                      <div class="w-more">
-                          <span class="w-date">Nov 2022 - Present</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div id="popup-content" style="display: none">
-              <h2 class="w-title"> Data Scientist (Freelancer)<br> UpWork 
-              </h2>
-              <div class="w-more">
-                  <span class="w-date">Nov 2022 - Present</span>
-              </div>
-              <div>
-                  <p>• As a freelance data scientist, I've had the privilege to work with a diverse range of clients, applying my skills in data science and artificial intelligence to solve real-world problems.</p>
-                  <p>• From building predictive models to uncovering actionable insights, I've been dedicated to delivering solutions that drive tangible results and exceed client expectations.</p>
-                  <p>• I'm passionate about leveraging my expertise in data science and artificial intelligence to help clients achieve their goals and achieve their goals.
-              </div>
-              <button type="button" class="btn btn-danger btn-flip-close" onclick="closePopup()">
-                  Close
-              </button>
-          </div>
-      </div>
-  </div>
-  <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%;
-      transform: translate(-50%, -50%); background-color: white;
-      padding: 20px; border-radius: 1rem; z-index: 1;">
-  </div>
-
+    
   <!-- Tata Consultancy Services -->
   <div class="col-md-4">
     <div class="work-box" style="border-radius: 1rem" onclick="popup(this)">
@@ -1003,6 +1004,20 @@ function updateVisitorCount(count) {
           <div class="row">
               <div class="col-md-12">
                   <div id="testimonial-mf" class="owl-carousel owl-theme">
+		      <!-- Recommendation 0 -->
+                      <div class="testimonial-box">
+                          <div class="content-test">
+                              <p class="description lead">
+                                  "I recently connected with Harbhajan on LinkedIn and was immediately impressed by his deep understanding of data science and AI. In our conversation, he generously shared his own journey in the field and offered invaluable advice on selecting the right tools and technologies for data-driven solutions. 
+				      His guidance was clear, practical, and showcased both his expertise and his hands-on experience. Harbhajan’s passion for continuous learning and his ability to break down complex concepts make him a standout professional."
+                              </p>
+                              <p class="description lead">
+                                  - Avesta Narimani, Data Scientist at Simon Fraser University, BC Canada
+                              </p>
+                              <span class="comit"><i class="fa fa-quote-right"></i></span>
+                          </div>
+                      </div>
+						  
                       <!-- Recommendation 0 -->
                       <div class="testimonial-box">
                           <div class="content-test">
